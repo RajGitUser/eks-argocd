@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/RajGitUser/eks-argocd.git
     targetRevision: main
-    path: namespace
+    path: namespaces
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
