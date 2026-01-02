@@ -8,10 +8,10 @@ spec:
   source:
     repoURL: https://github.com/RajGitUser/eks-argocd.git
     targetRevision: main
-    path: guestbook
+    path: namespace
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true       # Enables automatic deletion of resources removed from Git
