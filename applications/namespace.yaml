@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: namespace
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/RajGitUser/eks-argocd.git
+    targetRevision: main
+    path: guestbook
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: guestbook
+  syncPolicy:
+    automated:
+      prune: true       # Enables automatic deletion of resources removed from Git
+      selfHeal: true    # Automatically syncs changes if drift is detected
