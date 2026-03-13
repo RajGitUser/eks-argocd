@@ -16,3 +16,5 @@ spec:
     automated:
       prune: true       # Enables automatic deletion of resources removed from Git
       selfHeal: true    # Automatically syncs changes if drift is detected
+
+
